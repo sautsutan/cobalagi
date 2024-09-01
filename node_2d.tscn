@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx3fignbj3b06"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_qytdi"]
+[ext_resource type="Texture2D" uid="uid://d12k1xqsyc30i" path="res://icon.svg" id="1_s3qpo"]
+[ext_resource type="Script" path="res://Move.gd" id="2_c8q1u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1137.0
+offset_bottom = 629.0
+
+[node name="Virtual Joystick" parent="Control" instance=ExtResource("1_qytdi")]
+layout_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(535, 265)
+texture = ExtResource("1_s3qpo")
+script = ExtResource("2_c8q1u")
